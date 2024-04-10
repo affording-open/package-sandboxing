@@ -1,8 +1,8 @@
 Software package level sandboxing and isolation
 ===============================================
 
-Status: drafting
-Git origin: https://gitlab.com/affording-open/package-sandboxing
+Status: drafting \
+Git origin: https://gitlab.com/affording-open/package-sandboxing \
 Git origin backup: https://github.com/affording-open/package-sandboxing
 
 This collects ideas and discussions for isolation of software packages from
@@ -37,15 +37,13 @@ such boundaries in minds. However it might be worthwhile here as moving to a
 new design might not succeed soon enough.
 
 
-Strategies for system package managers
-______________________________________
+## Strategies for system package managers
 
 If you know of any examples of designs or implementations, please contribute.
 
 Some ideas:
 
-Capabilities during installation
---------------------------------
+### Capabilities during installation
 
 Package manageres that allow multiple repositories need to add a mechanism to
 specify which additional capabilities gets passed to each repo. There needs to
@@ -81,8 +79,7 @@ as a specific user can be passed to other packages. As services are declared in
 files, this could be implemented as a more constrained file creation capabiliy
 that also restricts the file content.
 
-Verify packages after build
----------------------------
+### Verify packages after build
 
 As an alternative, for declarative information like file content and path it is
 possible to verify the rules from the previous heading after the build instead
@@ -98,21 +95,18 @@ Taken together it seems the idea in this header would be more complicated and
 more work than the previous one.
 
 
-Status of specific packages managers
-____________________________________
+## Status of specific packages managers
 
 Where discussion, planing, progress on implementation happens, links are welcome.
 
-System package managers
------------------------
+### System package managers
 
 * TODO
 * Image based systems avoid this by entirely avoiding system package managers.
   * Android
   * TODO image based Linux distributions
 
-User level packer managers
---------------------------
+### User level packer managers
 
 Package managers that only install packages for users to use, but not software
 that makes up more core parts of the systems have it easier, as they do not
@@ -122,14 +116,12 @@ have to deal with software that needs higher capabilities.
 * Podman and other container implementations have full isolation
 * Android has full isolation
 
-Library / Language package managers
------------------------------------
+### Library / Language package managers
 
 * TODO
 
 
-Related sandboxing strategies
-_____________________________
+## Related sandboxing strategies
 
 In general capabilities based designs help sandboxing.
 
