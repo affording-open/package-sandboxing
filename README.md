@@ -13,7 +13,7 @@ not offer an easy way to take package initiated actions like install scripts
 with restricted capabilities.
 
 The xz compromise did not use this route, but it was a case of malicious build
-scripts not being caught during the sofware distributions process. While
+scripts not being caught during the software distributions process. While
 library sandboxing would have prevented it, there would still then be one other
 way open for a package with a malicious build script that provides this
 library. It could influence the package build so that the resulting package
@@ -118,6 +118,7 @@ have to deal with software that needs higher capabilities.
 
 ### Library / Language package managers
 
+* rpm https://github.com/rpm-software-management/rpm/discussions/3030
 * TODO
 
 
